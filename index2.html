@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>أعمالنا | روابط — منصتك الرقمية</title>
-<meta name="description" content="معرض أعمال روابط: 34 مشروعاً منفّذاً بين متاجر إلكترونية، مواقع ومنصات، هويات بصرية، وتوثيق خرائط Google.">
-<meta name="theme-color" content="#0A0325">
-<style>html,body{margin:0;padding:0;background:#0A0325}</style>
-</head>
-<body>
 <!-- ============================================================
      روابط | منصتك الرقمية — صفحة "أعمالنا"
      إصدار 2026 · هيرو ثلاثي الأبعاد + معرض أعمال + نافذة تفاصيل
@@ -20,8 +9,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&family=Tajawal:wght@400;500&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&family=Tajawal:wght@400;500&display=swap">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800;900&family=Tajawal:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800;900&family=Tajawal:wght@400;500;700&display=swap">
 
 <script type="application/ld+json">
 {
@@ -636,10 +625,13 @@
   border-end-end-radius:0;
 }
 /* شبكة خفيفة + حبيبات تمنع التدرجات من الظهور مسطّحة */
-/* توهّج علوي خفيف بدل الشبكة المُقنَّعة — طبقة رسم واحدة */
 #rwabts-works .rw-hero::before{
   content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
-  background:radial-gradient(60% 45% at 50% 8%,rgba(123,63,228,.22) 0%,transparent 70%);
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:62px 62px;
+  -webkit-mask-image:radial-gradient(75% 65% at 50% 40%,#000 0%,transparent 100%);
+  mask-image:radial-gradient(75% 65% at 50% 40%,#000 0%,transparent 100%);
 }#rwabts-works .rw-hero::after{
   content:"";position:absolute;inset:0;pointer-events:none;z-index:6;
   background:linear-gradient(to bottom,transparent 82%,rgba(246,245,252,.10) 100%);
@@ -652,8 +644,9 @@
 #rwabts-works .rw-hero-copy{position:relative;z-index:5;max-width:660px}#rwabts-works .rw-eyebrow{
   display:inline-flex;align-items:center;gap:9px;
   padding:8px 16px;border-radius:100px;
-  background:rgba(255,255,255,.09);
-  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.16);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
   font-family:var(--rw-font-d);font-weight:700;font-size:13.5px;letter-spacing:.2px;
   color:#fff;
 }#rwabts-works .rw-eyebrow .rw-dot{
@@ -665,7 +658,7 @@
 }#rwabts-works .rw-h1{
   margin-top:22px;
   font-size:clamp(34px,6.4vw,72px);
-  font-weight:800;
+  font-weight:900;
   line-height:1.14;
   letter-spacing:-.5px;
   color:#fff;
@@ -687,13 +680,15 @@
   min-height:54px;padding:0 28px;border-radius:100px;
   font-family:var(--rw-font-d);font-weight:800;font-size:15.5px;
   transition:transform .28s var(--rw-ease),box-shadow .28s var(--rw-ease),background .22s linear,color .22s linear;
+  will-change:transform;
 }#rwabts-works .rw-btn svg{width:19px;height:19px;flex:none}#rwabts-works .rw-btn-primary{
   background:linear-gradient(135deg,var(--rw-yellow) 0%,#FFC400 100%);
   color:#26074F;
   box-shadow:0 10px 26px rgba(255,216,47,.28);
 }#rwabts-works .rw-btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(255,216,47,.40)}#rwabts-works .rw-btn-primary:active{transform:translateY(-1px)}#rwabts-works .rw-btn-ghost{
-  background:rgba(255,255,255,.08);color:#fff;
-  border:1px solid rgba(255,255,255,.24);
+  background:rgba(255,255,255,.06);color:#fff;
+  border:1px solid rgba(255,255,255,.2);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
 }#rwabts-works .rw-btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
 /* --- إحصاءات مختصرة --- */
 #rwabts-works .rw-stats{
@@ -705,70 +700,40 @@
   content:"";position:absolute;inset-inline-start:0;top:6px;bottom:6px;width:3px;border-radius:3px;
   background:linear-gradient(to bottom,var(--rw-cyan),var(--rw-mint));
 }#rwabts-works .rw-stat:nth-child(2)::before{background:linear-gradient(to bottom,var(--rw-mint),var(--rw-yellow))}#rwabts-works .rw-stat:nth-child(3)::before{background:linear-gradient(to bottom,var(--rw-yellow),var(--rw-cyan))}#rwabts-works .rw-stat-n{
-  display:block;font-family:var(--rw-font-d);font-weight:800;
+  display:block;font-family:var(--rw-font-d);font-weight:900;
   font-size:clamp(24px,4.4vw,36px);line-height:1.1;color:#fff;
   font-variant-numeric:tabular-nums;
 }#rwabts-works .rw-stat-l{display:block;margin-top:4px;font-size:clamp(11.5px,1.6vw,13.5px);color:rgba(255,255,255,.62);line-height:1.5}
-/* --- المسرح ثلاثي الأبعاد: مدار خدمات المنصة ---
-   CSS 3D خالص: الحركة على طبقة المُركِّب (GPU) بلا أي رسم لكل إطار */
+/* --- المسرح ثلاثي الأبعاد --- */
 #rwabts-works .rw-stage{
-  position:relative;width:100%;aspect-ratio:1/1;
-  display:grid;place-items:center;
-  perspective:1000px;perspective-origin:50% 50%;
-}#rwabts-works .rw-stage::before{
-  content:"";position:absolute;width:72%;aspect-ratio:1;border-radius:50%;
-  background:radial-gradient(circle,rgba(123,63,228,.52) 0%,rgba(76,14,145,.20) 46%,transparent 70%);
-}#rwabts-works .rw-scene{
-  --r:196px;--n:74px;
-  position:relative;width:min(100%,540px);aspect-ratio:1;
-  display:grid;place-items:center;
-  transform-style:preserve-3d;transform:rotateX(28deg);
-}
-/* النواة: أشكال الشعار الأربعة */
-#rwabts-works .rw-core{position:relative;width:138px;height:138px;transform-style:preserve-3d;
-  animation:rw-core-float 8s var(--rw-ease) infinite}#rwabts-works .rw-core span{position:absolute;width:62px;height:62px;display:block}#rwabts-works .rw-core-a{border-radius:50%;background:linear-gradient(140deg,#17DEFF,#0C9FC4);
-  top:0;left:0;box-shadow:0 0 28px rgba(23,222,255,.48)}#rwabts-works .rw-core-b{border-radius:50% 50% 7px 50%;background:linear-gradient(140deg,#29FFAA,#12C98A);
-  top:0;right:0;box-shadow:0 0 26px rgba(41,255,170,.42)}#rwabts-works .rw-core-c{border-radius:50% 7px 50% 50%;background:linear-gradient(140deg,#7B3FE4,#4C0E91);
-  bottom:0;left:0;box-shadow:0 0 24px rgba(123,63,228,.40)}#rwabts-works .rw-core-d{border-radius:50%;background:linear-gradient(140deg,#FFD82F,#EFA400);
-  bottom:0;right:0;box-shadow:0 0 26px rgba(255,216,47,.42)}@keyframes rw-core-float{0%,100%{transform:translateY(0) rotateZ(0)}50%{transform:translateY(-13px) rotateZ(4deg)}}
-/* حلقتا المدار */
-#rwabts-works .rw-ring{
-  position:absolute;top:50%;left:50%;
-  width:calc(var(--r) * 2);height:calc(var(--r) * 2);
-  margin-top:calc(var(--r) * -1);margin-left:calc(var(--r) * -1);
-  border-radius:50%;border:1px solid rgba(255,255,255,.13);
-  transform:rotateX(90deg);
-}#rwabts-works .rw-ring-b{
-  width:calc(var(--r) * 1.44);height:calc(var(--r) * 1.44);
-  margin-top:calc(var(--r) * -.72);margin-left:calc(var(--r) * -.72);
-  border-color:rgba(23,222,255,.20);
-  transform:rotateX(58deg) rotateZ(24deg);
-}
-/* بطاقات الخدمات الدائرة حول النواة */
-#rwabts-works .rw-orbit{
-  position:absolute;top:50%;left:50%;width:1px;height:1px;
-  transform-style:preserve-3d;
-  animation:rw-orbit 34s linear infinite;
-}#rwabts-works .rw-node{
-  position:absolute;top:0;left:0;width:var(--n);height:var(--n);
-  margin-top:calc(var(--n) / -2);margin-left:calc(var(--n) / -2);
-  transform-style:preserve-3d;
-  transform:rotateY(var(--a)) translateZ(var(--r));
-}#rwabts-works .rw-node-face{
-  width:100%;height:100%;border-radius:21px;
-  display:grid;place-items:center;color:#fff;
-  background:linear-gradient(150deg,rgba(255,255,255,.19),rgba(255,255,255,.07));
-  border:1px solid rgba(255,255,255,.28);
-  box-shadow:0 12px 30px rgba(8,2,30,.40);
-  /* الدوران المعاكس يُبقي الأيقونة مواجهة للناظر · التأخير نفسه يضبط تلاشي العمق */
-  animation:rw-node-face 34s linear infinite,rw-node-depth 34s linear infinite;
-  animation-delay:calc(var(--i) * -34s / 7);
-}#rwabts-works .rw-node-icon{width:30px;height:30px}@keyframes rw-orbit{to{transform:rotateY(360deg)}}@keyframes rw-node-face{to{transform:rotateY(-360deg)}}@keyframes rw-node-depth{0%{opacity:1}50%{opacity:.32}100%{opacity:1}}
+  position:relative;
+  aspect-ratio:1/1;
+  width:100%;
+  perspective:1100px;
+  perspective-origin:50% 45%;
+}#rwabts-works .rw-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:2}
+/* أشكال الهوية العائمة (CSS 3D) */
+#rwabts-works .rw-shapes{position:absolute;inset:0;transform-style:preserve-3d;z-index:3;pointer-events:none;
+  transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));
+  transition:transform .5s var(--rw-ease);
+}#rwabts-works .rw-shape{position:absolute;border-radius:50%;transform-style:preserve-3d}#rwabts-works .rw-s1{width:10.5%;aspect-ratio:1;background:linear-gradient(140deg,var(--rw-cyan),#0C9FC4);
+  inset-block-start:9%;inset-inline-end:9%;opacity:.88;
+  box-shadow:0 0 34px rgba(23,222,255,.45),0 14px 34px rgba(0,0,0,.30);
+  transform:translateZ(130px);animation:rw-float1 11s ease-in-out infinite}#rwabts-works .rw-s2{width:7%;aspect-ratio:1;background:linear-gradient(140deg,var(--rw-mint),#12C98A);
+  border-radius:50% 50% 50% 5px;inset-block-end:16%;inset-inline-end:6%;opacity:.85;
+  box-shadow:0 0 28px rgba(41,255,170,.40),0 10px 26px rgba(0,0,0,.28);
+  transform:translateZ(90px);animation:rw-float2 13s ease-in-out infinite}#rwabts-works .rw-s3{width:8%;aspect-ratio:1;background:linear-gradient(140deg,var(--rw-yellow),#EFA400);
+  inset-block-end:9%;inset-inline-start:15%;opacity:.9;
+  box-shadow:0 0 30px rgba(255,216,47,.38),0 12px 28px rgba(0,0,0,.28);
+  transform:translateZ(160px);animation:rw-float3 9.5s ease-in-out infinite}#rwabts-works .rw-s4{width:13%;aspect-ratio:1;background:linear-gradient(140deg,#7B3FE4,var(--rw-purple));
+  border-radius:50% 6px 50% 50%;inset-block-start:13%;inset-inline-start:5%;
+  opacity:.42;filter:blur(1.5px);
+  transform:translateZ(20px);animation:rw-float2 15s ease-in-out infinite reverse}@keyframes rw-float1{0%,100%{transform:translateZ(130px) translateY(0)}50%{transform:translateZ(130px) translateY(-24px)}}@keyframes rw-float2{0%,100%{transform:translateZ(90px) translateY(0) rotate(0)}50%{transform:translateZ(90px) translateY(18px) rotate(-14deg)}}@keyframes rw-float3{0%,100%{transform:translateZ(160px) translateY(0)}50%{transform:translateZ(160px) translateY(-16px)}}
 /* مؤشر التمرير */
 #rwabts-works .rw-cue{
   position:absolute;z-index:7;bottom:26px;left:50%;transform:translateX(-50%);
   width:max-content;display:flex;flex-direction:column;align-items:center;gap:8px;
-  color:rgba(255,255,255,.6);font-size:12.5px;font-family:var(--rw-font-d);font-weight:700;
+  color:rgba(255,255,255,.6);font-size:12.5px;font-family:var(--rw-font-d);font-weight:600;
   transition:opacity .4s linear,color .2s linear;
 }#rwabts-works .rw-cue:hover{color:#fff}#rwabts-works .rw-cue-line{width:1.5px;height:34px;border-radius:2px;background:linear-gradient(to bottom,var(--rw-cyan),transparent);
   animation:rw-cue 2.2s var(--rw-ease) infinite}@keyframes rw-cue{0%{transform:scaleY(.25);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(.25);transform-origin:bottom}}
@@ -789,7 +754,7 @@
   background:rgba(76,14,145,.07);
   color:var(--rw-purple);
   font-family:var(--rw-font-d);font-weight:800;font-size:12.5px;letter-spacing:.3px;
-}#rwabts-works .rw-h2{margin-top:16px;font-size:clamp(26px,4.6vw,44px);font-weight:800;color:var(--rw-text);letter-spacing:-.3px;text-wrap:balance}#rwabts-works .rw-sub{margin-top:12px;font-size:clamp(14.5px,1.9vw,17px);color:var(--rw-muted);line-height:1.8}
+}#rwabts-works .rw-h2{margin-top:16px;font-size:clamp(26px,4.6vw,44px);font-weight:900;color:var(--rw-text);letter-spacing:-.3px;text-wrap:balance}#rwabts-works .rw-sub{margin-top:12px;font-size:clamp(14.5px,1.9vw,17px);color:var(--rw-muted);line-height:1.8}
 /* --- شريط التصنيفات --- */
 #rwabts-works .rw-filters-outer{position:relative;margin-block:clamp(28px,4.5vw,44px) clamp(22px,3.5vw,32px)}#rwabts-works .rw-filters{
   display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;
@@ -827,12 +792,14 @@
   box-shadow:var(--rw-shadow-s);
   transition:transform .45s var(--rw-ease),box-shadow .4s var(--rw-ease),border-color .3s linear;
   transform-style:preserve-3d;
-  transform:translateY(0) rotateX(0);
-}#rwabts-works .rw-card-btn:hover,#rwabts-works .rw-card-btn:focus-visible{
-  transform:translateY(-8px) rotateX(3.5deg);
+  /* الإمالة ثلاثية الأبعاد تُحدَّث من JS عبر هذه المتغيّرات */
+  transform:perspective(1000px) rotateX(var(--tx,0deg)) rotateY(var(--ty,0deg)) translateY(var(--tl,0px));
+  will-change:transform;
+}#rwabts-works .rw-card-btn:hover{
+  --tl:-7px;
   box-shadow:var(--rw-shadow-m);
   border-color:rgba(76,14,145,.24);
-}#rwabts-works .rw-card-media{
+}#rwabts-works .rw-card-btn.is-tilting{transition:box-shadow .4s var(--rw-ease),border-color .3s linear}#rwabts-works .rw-card-media{
   position:relative;display:block;
   aspect-ratio:16/10;
   overflow:hidden;
@@ -849,7 +816,10 @@
   padding:18px;text-align:center;color:#fff;
 }#rwabts-works .rw-card-ph::before{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(200deg,rgba(255,255,255,.14) 0%,transparent 42%);
+  background-image:radial-gradient(rgba(255,255,255,.14) 1px,transparent 1px);
+  background-size:15px 15px;
+  -webkit-mask-image:radial-gradient(70% 70% at 50% 50%,#000,transparent);
+  mask-image:radial-gradient(70% 70% at 50% 50%,#000,transparent);
 }#rwabts-works .rw-ph-icon{width:30px;height:30px;opacity:.9;position:relative}#rwabts-works .rw-ph-name{
   position:relative;font-family:var(--rw-font-d);font-weight:800;
   font-size:15px;line-height:1.5;max-width:90%;
@@ -901,7 +871,8 @@
    4. نافذة التفاصيل (Modal)
    ============================================================ */
 #rwabts-works .rw-modal{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:clamp(0px,3vw,40px)}#rwabts-works .rw-modal[hidden]{display:none}#rwabts-works .rw-modal-ov{
-  position:absolute;inset:0;background:rgba(8,2,30,.80);
+  position:absolute;inset:0;background:rgba(8,2,30,.72);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
   opacity:0;transition:opacity .34s var(--rw-ease);
 }#rwabts-works .rw-modal.is-open .rw-modal-ov{opacity:1}#rwabts-works .rw-panel{
   position:relative;
@@ -931,7 +902,9 @@
   color:#fff;text-align:center;padding:26px;
 }#rwabts-works .rw-m-ph::before{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(200deg,rgba(255,255,255,.14) 0%,transparent 42%);
+  background-image:radial-gradient(rgba(255,255,255,.14) 1px,transparent 1px);background-size:18px 18px;
+  -webkit-mask-image:radial-gradient(70% 70% at 50% 50%,#000,transparent);
+  mask-image:radial-gradient(70% 70% at 50% 50%,#000,transparent);
 }#rwabts-works .rw-m-ph svg{width:44px;height:44px;position:relative;opacity:.92}#rwabts-works .rw-m-ph b{position:relative;font-family:var(--rw-font-d);font-size:19px;font-weight:800;max-width:82%;line-height:1.6}#rwabts-works .rw-m-ph i{position:relative;font-style:normal;font-size:11.5px;letter-spacing:1px;opacity:.65;
   padding:4px 12px;border:1px solid rgba(255,255,255,.3);border-radius:100px}#rwabts-works .rw-m-media.has-img .rw-m-ph{opacity:0;visibility:hidden}
 /* عمود التفاصيل */
@@ -939,10 +912,10 @@
   display:inline-flex;align-items:center;gap:7px;padding:6px 13px;border-radius:100px;
   background:rgba(76,14,145,.08);color:var(--rw-purple);
   font-family:var(--rw-font-d);font-weight:800;font-size:12px;
-}#rwabts-works .rw-m-pill svg{width:14px;height:14px}#rwabts-works .rw-m-title{margin-top:14px;font-size:clamp(20px,3vw,27px);font-weight:800;color:var(--rw-text);line-height:1.38}#rwabts-works .rw-m-meta{margin-top:8px;font-size:14px;color:var(--rw-muted)}#rwabts-works .rw-m-desc{margin-top:16px;font-size:15.2px;line-height:1.95;color:#40365F}#rwabts-works .rw-m-tags{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}#rwabts-works .rw-m-tag{
+}#rwabts-works .rw-m-pill svg{width:14px;height:14px}#rwabts-works .rw-m-title{margin-top:14px;font-size:clamp(20px,3vw,27px);font-weight:900;color:var(--rw-text);line-height:1.38}#rwabts-works .rw-m-meta{margin-top:8px;font-size:14px;color:var(--rw-muted)}#rwabts-works .rw-m-desc{margin-top:16px;font-size:15.2px;line-height:1.95;color:#40365F}#rwabts-works .rw-m-tags{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}#rwabts-works .rw-m-tag{
   padding:6px 12px;border-radius:100px;background:var(--rw-bg);
-  border:1px solid var(--rw-line);color:var(--rw-muted);font-size:12.5px;font-weight:400;
-}#rwabts-works .rw-m-foot[hidden]{display:none}#rwabts-works .rw-m-foot{
+  border:1px solid var(--rw-line);color:var(--rw-muted);font-size:12.5px;font-weight:500;
+}#rwabts-works .rw-m-foot{
   padding:16px clamp(22px,3vw,34px);border-top:1px solid var(--rw-line);
   background:var(--rw-surface);
   display:flex;align-items:center;gap:10px;flex-wrap:wrap;
@@ -953,21 +926,23 @@
   font-family:var(--rw-font-d);font-weight:800;font-size:14.5px;
   box-shadow:0 8px 20px rgba(76,14,145,.26);
   transition:transform .25s var(--rw-ease),box-shadow .25s var(--rw-ease);
-}#rwabts-works .rw-m-visit:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(76,14,145,.36)}#rwabts-works .rw-m-visit svg{width:17px;height:17px}#rwabts-works .rw-m-visit[hidden]{display:none}
+}#rwabts-works .rw-m-visit:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(76,14,145,.36)}#rwabts-works .rw-m-visit svg{width:17px;height:17px}#rwabts-works .rw-m-visit[hidden]{display:none}#rwabts-works .rw-m-note{font-size:13px;color:var(--rw-muted)}#rwabts-works .rw-m-note[hidden]{display:none}
 /* أدوات النافذة */
 #rwabts-works .rw-m-close{
   position:absolute;z-index:4;inset-block-start:14px;inset-inline-start:14px;
   width:44px;height:44px;border-radius:50%;
   display:grid;place-items:center;
-  background:rgba(10,3,37,.68);color:#fff;
-  border:1px solid rgba(255,255,255,.2);
+  background:rgba(10,3,37,.5);color:#fff;
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.18);
   transition:background .2s linear,transform .2s var(--rw-ease);
 }#rwabts-works .rw-m-close:hover{background:rgba(10,3,37,.8);transform:rotate(90deg)}#rwabts-works .rw-m-close svg{width:19px;height:19px}#rwabts-works .rw-m-nav{
   position:absolute;z-index:4;inset-block-end:14px;inset-inline-start:14px;
   display:flex;align-items:center;gap:8px;
   padding:6px;border-radius:100px;
-  background:rgba(10,3,37,.68);
-  border:1px solid rgba(255,255,255,.2);
+  background:rgba(10,3,37,.5);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.18);
 }#rwabts-works .rw-nav-btn{
   width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:#fff;
   transition:background .2s linear,opacity .2s linear;
@@ -978,15 +953,13 @@ body.rw-lock{overflow:hidden!important}
 /* ============================================================
    5. الاستجابة للشاشات
    ============================================================ */
-@media (max-width:1024px){#rwabts-works .rw-hero-inner{grid-template-columns:1fr;gap:0}#rwabts-works .rw-hero-copy{max-width:none;text-align:center;margin-inline:auto}#rwabts-works .rw-lead{margin-inline:auto}#rwabts-works .rw-hero-actions{justify-content:center}#rwabts-works .rw-stats{margin-inline:auto}#rwabts-works .rw-stat{padding-inline-start:0;padding-block-start:12px;text-align:center}#rwabts-works .rw-stat::before{inset-inline:0;top:0;bottom:auto;width:34px;height:3px;margin-inline:auto}
-/* المشهد يصبح شريطاً بصرياً فوق النص، فيبقى النص على خلفية نظيفة تماماً */
-#rwabts-works .rw-stage{order:-1;aspect-ratio:auto;height:clamp(186px,max(26vh,26vw),286px);margin-block-end:clamp(6px,2vh,18px)}#rwabts-works .rw-scene{--r:clamp(112px,20vw,178px);--n:clamp(50px,7vw,70px);
-    width:min(100%,max(340px,60vw));height:100%;aspect-ratio:auto;transform:rotateX(19deg)}#rwabts-works .rw-core{width:clamp(86px,11vw,122px);height:clamp(86px,11vw,122px)}#rwabts-works .rw-core span{width:clamp(38px,5vw,55px);height:clamp(38px,5vw,55px)}#rwabts-works .rw-node-face{border-radius:clamp(15px,2vw,20px)}#rwabts-works .rw-node-icon{width:clamp(21px,2.9vw,29px);height:clamp(21px,2.9vw,29px)}
+@media (max-width:1024px){#rwabts-works .rw-hero-inner{grid-template-columns:1fr;gap:0}#rwabts-works .rw-hero-copy{max-width:none;text-align:center;margin-inline:auto}#rwabts-works .rw-lead{margin-inline:auto}#rwabts-works .rw-hero-actions{justify-content:center}#rwabts-works .rw-stats{margin-inline:auto}#rwabts-works .rw-stat{padding-inline-start:0;padding-block-start:12px;text-align:center}#rwabts-works .rw-stat::before{inset-inline:0;top:0;bottom:auto;width:34px;height:3px;margin-inline:auto}#rwabts-works .rw-stage{position:absolute;inset:0;aspect-ratio:auto;z-index:1;opacity:.55}#rwabts-works .rw-shapes{display:none}
+/* حجاب خفيف يضمن تباين النص فوق المشهد */
+#rwabts-works .rw-hero-copy::before{content:"";position:absolute;inset:-8% -10%;z-index:-1;pointer-events:none;
+    background:radial-gradient(60% 52% at 50% 46%,rgba(10,3,37,.74) 0%,rgba(10,3,37,.34) 58%,transparent 100%)}
 }@media (max-width:860px){#rwabts-works .rw-panel{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr);
     width:100%;max-height:100vh;max-height:100svh;height:100%;border-radius:0}#rwabts-works .rw-modal{padding:0}#rwabts-works .rw-m-media{aspect-ratio:16/10;min-height:0}#rwabts-works .rw-m-nav{inset-block-end:12px;inset-inline-start:12px}
-}@media (max-width:640px){
-/* لا ارتفاع مفروض: الهيرو بقدر محتواه فقط */
-#rwabts-works .rw-hero{min-height:0;padding-block:clamp(26px,5vh,40px) clamp(44px,7vh,62px)}#rwabts-works .rw-hero-inner{gap:0}#rwabts-works .rw-eyebrow{font-size:12.5px;padding:7px 14px}#rwabts-works .rw-h1{margin-top:16px;font-size:clamp(28px,7.4vw,36px);line-height:1.32;letter-spacing:0}#rwabts-works .rw-lead{margin-top:14px;font-size:16px;line-height:1.85;color:rgba(255,255,255,.84);max-width:34ch}#rwabts-works .rw-hero-actions{margin-top:24px;gap:10px}#rwabts-works .rw-stats{margin-top:28px;grid-template-columns:repeat(3,1fr);gap:8px;max-width:420px}#rwabts-works .rw-stat-l{font-size:12px;color:rgba(255,255,255,.72);line-height:1.45}#rwabts-works .rw-cue{display:none}#rwabts-works .rw-btn{width:100%;max-width:340px}#rwabts-works .rw-hero-actions{flex-direction:column}#rwabts-works .rw-filters{
+}@media (max-width:640px){#rwabts-works .rw-hero{padding-block:84px 96px;min-height:auto;min-height:auto}#rwabts-works .rw-hero{min-height:92vh;min-height:92svh}#rwabts-works .rw-stats{grid-template-columns:repeat(3,1fr);gap:8px;max-width:420px}#rwabts-works .rw-btn{width:100%;max-width:340px}#rwabts-works .rw-hero-actions{flex-direction:column}#rwabts-works .rw-filters{
     flex-wrap:nowrap;justify-content:flex-start;
     overflow-x:auto;scroll-snap-type:x proximity;
     padding-block:4px;padding-inline:clamp(16px,4vw,32px);
@@ -1022,7 +995,7 @@ body.rw-lock{overflow:hidden!important}
       </h1>
 
       <p class="rw-lead">
-        نحوّل فكرتك إلى حضور رقمي يُقنع عملاءك ويزيد مبيعاتك، من المتجر إلى الهوية إلى الظهور على خرائط Google.
+        34 مشروعاً منفّذاً بين متاجر إلكترونية، مواقع ومنصات، هويات بصرية، وتوثيق خرائط Google.
       </p>
 
       <div class="rw-hero-actions">
@@ -1053,22 +1026,12 @@ body.rw-lock{overflow:hidden!important}
     </div>
 
     <div class="rw-stage" aria-hidden="true">
-      <div class="rw-scene">
-        <div class="rw-core">
-          <span class="rw-core-a"></span><span class="rw-core-b"></span>
-          <span class="rw-core-c"></span><span class="rw-core-d"></span>
-        </div>
-        <div class="rw-ring"></div>
-        <div class="rw-ring rw-ring-b"></div>
-        <div class="rw-orbit">
-          <div class="rw-node" style="--a:0.00deg;--i:0"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-          <div class="rw-node" style="--a:51.43deg;--i:1"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4h16v12H4zM2 20h20M9 8l3 3 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-          <div class="rw-node" style="--a:102.86deg;--i:2"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 17l6-6 4 4 8-8M21 7v6h-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-          <div class="rw-node" style="--a:154.29deg;--i:3"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 5h18v14H3zM10 9l5 3-5 3z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-          <div class="rw-node" style="--a:205.71deg;--i:4"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M17 2l-3 8h5l-9 12 3-8H8z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-          <div class="rw-node" style="--a:257.14deg;--i:5"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2l3 7 7 .5-5.5 4.5L18 21l-6-4-6 4 1.5-7L2 9.5 9 9z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-          <div class="rw-node" style="--a:308.57deg;--i:6"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C7 2 3 6 3 11c0 2 1 4 2 5l-1 4 4-2c1 .4 3 .7 4 .7 5 0 9-4 9-9s-4-7-9-7zm-3 9l-2-2-2 2 4 4 7-7-2-2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-        </div>
+      <canvas class="rw-canvas" id="rw-canvas"></canvas>
+      <div class="rw-shapes" id="rw-shapes">
+        <span class="rw-shape rw-s1"></span>
+        <span class="rw-shape rw-s2"></span>
+        <span class="rw-shape rw-s3"></span>
+        <span class="rw-shape rw-s4"></span>
       </div>
     </div>
 
@@ -1110,7 +1073,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="https://hobahair.com/" data-image="https://rwabts.net/wp-content/uploads/2026/07/hobacover.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل هوبا صالون">
           <span class="rw-card-media" style="--ph-a:#4C0E91;--ph-b:#17DEFF">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/hobacover.jpg" alt="هوبا صالون — صالون نسائي | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/hobacover.jpg" alt="هوبا صالون — صالون نسائي | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4h16v12H4zM2 20h20M9 8l3 3 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">هوبا صالون</span>
@@ -1159,7 +1122,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="https://athooqkhair.com/categories/1085586/تمور-فله" data-image="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_120239_Chrome-scaled.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل عذوق الخير">
           <span class="rw-card-media" style="--ph-a:#3A0B78;--ph-b:#FFD82F">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_120239_Chrome-scaled.jpg" alt="عذوق الخير — متجر إلكتروني | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_120239_Chrome-scaled.jpg" alt="عذوق الخير — متجر إلكتروني | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">عذوق الخير</span>
@@ -1184,7 +1147,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="https://talahaljood.com/categories/592985/plain-date" data-image="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_120131_Chrome-scaled.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل تالة الجود">
           <span class="rw-card-media" style="--ph-a:#2A0A6B;--ph-b:#7B3FE4">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_120131_Chrome-scaled.jpg" alt="تالة الجود — متجر إلكتروني | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_120131_Chrome-scaled.jpg" alt="تالة الجود — متجر إلكتروني | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">تالة الجود</span>
@@ -1209,7 +1172,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="https://waredataltomoor.com/" data-image="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_120148_Chrome-scaled.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل واردات التمور">
           <span class="rw-card-media" style="--ph-a:#4C0E91;--ph-b:#17DEFF">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_120148_Chrome-scaled.jpg" alt="واردات التمور — متجر إلكتروني | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_120148_Chrome-scaled.jpg" alt="واردات التمور — متجر إلكتروني | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">واردات التمور</span>
@@ -1234,7 +1197,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="https://wadimd.zid.store" data-image="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_120210_Chrome-scaled.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل تمور الوادي المبارك">
           <span class="rw-card-media" style="--ph-a:#1A0A4A;--ph-b:#29FFAA">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_120210_Chrome-scaled.jpg" alt="تمور الوادي المبارك — متجر إلكتروني | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_120210_Chrome-scaled.jpg" alt="تمور الوادي المبارك — متجر إلكتروني | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">تمور الوادي المبارك</span>
@@ -1259,7 +1222,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="https://aldayfe-foods.com/ar/التمور/c1449819986" data-image="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_120305_Chrome-scaled.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل شركة الضيف للصناعات الغذائية">
           <span class="rw-card-media" style="--ph-a:#3A0B78;--ph-b:#FFD82F">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_120305_Chrome-scaled.jpg" alt="شركة الضيف للصناعات الغذائية — متجر إلكتروني | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_120305_Chrome-scaled.jpg" alt="شركة الضيف للصناعات الغذائية — متجر إلكتروني | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">شركة الضيف للصناعات الغذائية</span>
@@ -1284,7 +1247,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/Screenshot-2026-07-12-155958.png">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل متجر عطارة الحكمة">
           <span class="rw-card-media" style="--ph-a:#2A0A6B;--ph-b:#7B3FE4">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot-2026-07-12-155958.png" alt="متجر عطارة الحكمة — متجر إلكتروني | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot-2026-07-12-155958.png" alt="متجر عطارة الحكمة — متجر إلكتروني | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">متجر عطارة الحكمة</span>
@@ -1309,7 +1272,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/screencapture-ajmalsbaya-2026-07-12-15_06_44-scaled.png">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل متجر أجمل صبايا">
           <span class="rw-card-media" style="--ph-a:#4C0E91;--ph-b:#17DEFF">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-ajmalsbaya-2026-07-12-15_06_44-scaled.png" alt="متجر أجمل صبايا — متجر وتسويق | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-ajmalsbaya-2026-07-12-15_06_44-scaled.png" alt="متجر أجمل صبايا — متجر وتسويق | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">متجر أجمل صبايا</span>
@@ -1334,7 +1297,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/screencapture-muqawil-org-ar-2026-07-12-15_09_12-scaled.png">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل تطوير منصة مقاول">
           <span class="rw-card-media" style="--ph-a:#1A0A4A;--ph-b:#29FFAA">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-muqawil-org-ar-2026-07-12-15_09_12-scaled.png" alt="تطوير منصة مقاول — منصة إلكترونية | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-muqawil-org-ar-2026-07-12-15_09_12-scaled.png" alt="تطوير منصة مقاول — منصة إلكترونية | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4h16v12H4zM2 20h20M9 8l3 3 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">تطوير منصة مقاول</span>
@@ -1359,7 +1322,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/screencapture-blackboard-to-2026-07-12-15_53_29.png">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل جامعة الإمام محمد بن سعود الإسلامية">
           <span class="rw-card-media" style="--ph-a:#3A0B78;--ph-b:#FFD82F">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-blackboard-to-2026-07-12-15_53_29.png" alt="جامعة الإمام محمد بن سعود الإسلامية — حل تعليمي | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-blackboard-to-2026-07-12-15_53_29.png" alt="جامعة الإمام محمد بن سعود الإسلامية — حل تعليمي | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4h16v12H4zM2 20h20M9 8l3 3 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">جامعة الإمام محمد بن سعود الإسلامية</span>
@@ -1384,7 +1347,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/screencapture-saltan-store2-2026-07-12-15_25_17-scaled.png">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل متجر سلطان للمنتجات الرقمية">
           <span class="rw-card-media" style="--ph-a:#2A0A6B;--ph-b:#7B3FE4">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-saltan-store2-2026-07-12-15_25_17-scaled.png" alt="متجر سلطان للمنتجات الرقمية — منتجات رقمية | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-saltan-store2-2026-07-12-15_25_17-scaled.png" alt="متجر سلطان للمنتجات الرقمية — منتجات رقمية | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">متجر سلطان للمنتجات الرقمية</span>
@@ -1409,7 +1372,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/screencapture-alammarigold-2026-07-12-15_26_39-scaled.png">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل العماري للذهب والمجوهرات">
           <span class="rw-card-media" style="--ph-a:#4C0E91;--ph-b:#17DEFF">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-alammarigold-2026-07-12-15_26_39-scaled.png" alt="العماري للذهب والمجوهرات — ذهب ومجوهرات | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-alammarigold-2026-07-12-15_26_39-scaled.png" alt="العماري للذهب والمجوهرات — ذهب ومجوهرات | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">العماري للذهب والمجوهرات</span>
@@ -1434,7 +1397,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/screencapture-qzs-ksa-ar-2026-07-12-15_28_50-scaled.png">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل متجر قمة زاوية الشفاء">
           <span class="rw-card-media" style="--ph-a:#1A0A4A;--ph-b:#29FFAA">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-qzs-ksa-ar-2026-07-12-15_28_50-scaled.png" alt="متجر قمة زاوية الشفاء — إعادة تصميم | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-qzs-ksa-ar-2026-07-12-15_28_50-scaled.png" alt="متجر قمة زاوية الشفاء — إعادة تصميم | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">متجر قمة زاوية الشفاء</span>
@@ -1459,7 +1422,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/screencapture-bar-sa-2026-07-12-15_30_19-scaled.png">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل متجر بار">
           <span class="rw-card-media" style="--ph-a:#3A0B78;--ph-b:#FFD82F">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-bar-sa-2026-07-12-15_30_19-scaled.png" alt="متجر بار — أثاث وديكور | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-bar-sa-2026-07-12-15_30_19-scaled.png" alt="متجر بار — أثاث وديكور | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">متجر بار</span>
@@ -1484,7 +1447,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="https://fqaish.com/" data-image="https://rwabts.net/wp-content/uploads/2026/07/screencapture-fqaish-2026-07-09-15_42_55-scaled-1.webp">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل متجر مجوهرات فقيش">
           <span class="rw-card-media" style="--ph-a:#2A0A6B;--ph-b:#7B3FE4">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-fqaish-2026-07-09-15_42_55-scaled-1.webp" alt="متجر مجوهرات فقيش — متجر مجوهرات | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-fqaish-2026-07-09-15_42_55-scaled-1.webp" alt="متجر مجوهرات فقيش — متجر مجوهرات | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">متجر مجوهرات فقيش</span>
@@ -1509,7 +1472,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/screencapture-avalgold-2026-07-09-15_45_01-1-scaled.png">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل افال للمجوهرات">
           <span class="rw-card-media" style="--ph-a:#4C0E91;--ph-b:#17DEFF">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-avalgold-2026-07-09-15_45_01-1-scaled.png" alt="افال للمجوهرات — ذهب وألماس | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-avalgold-2026-07-09-15_45_01-1-scaled.png" alt="افال للمجوهرات — ذهب وألماس | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">افال للمجوهرات</span>
@@ -1534,7 +1497,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="https://alhindirestaurant.vercel.app/" data-image="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_113251_Chrome-scaled.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل مطعم الهندي">
           <span class="rw-card-media" style="--ph-a:#1A0A4A;--ph-b:#29FFAA">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_113251_Chrome-scaled.jpg" alt="مطعم الهندي — مطعم | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_113251_Chrome-scaled.jpg" alt="مطعم الهندي — مطعم | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4h16v12H4zM2 20h20M9 8l3 3 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">مطعم الهندي</span>
@@ -1559,7 +1522,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="https://halfmilion.vercel.app/" data-image="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_113325_Chrome-scaled.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل هاف مليون">
           <span class="rw-card-media" style="--ph-a:#3A0B78;--ph-b:#FFD82F">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_113325_Chrome-scaled.jpg" alt="هاف مليون — قهوة ومقهى | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_113325_Chrome-scaled.jpg" alt="هاف مليون — قهوة ومقهى | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4h16v12H4zM2 20h20M9 8l3 3 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">هاف مليون</span>
@@ -1584,7 +1547,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="https://elmenshawy-website-1.vercel.app/" data-image="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_113509_Chrome-scaled.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل المنشاوي">
           <span class="rw-card-media" style="--ph-a:#2A0A6B;--ph-b:#7B3FE4">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_113509_Chrome-scaled.jpg" alt="المنشاوي — مطعم كشري وحلواني | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_113509_Chrome-scaled.jpg" alt="المنشاوي — مطعم كشري وحلواني | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4h16v12H4zM2 20h20M9 8l3 3 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">المنشاوي</span>
@@ -1609,7 +1572,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="https://800pharmacy.ae/" data-image="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_114103_Chrome-scaled.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل 800Pharmacy">
           <span class="rw-card-media" style="--ph-a:#4C0E91;--ph-b:#17DEFF">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_114103_Chrome-scaled.jpg" alt="800Pharmacy — صيدلية إلكترونية | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_114103_Chrome-scaled.jpg" alt="800Pharmacy — صيدلية إلكترونية | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">800Pharmacy</span>
@@ -1634,7 +1597,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="https://makbusah-catalog.netlify.app" data-image="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_114134_Chrome-scaled.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل مكبوسة - قائمة الطعام">
           <span class="rw-card-media" style="--ph-a:#1A0A4A;--ph-b:#29FFAA">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_114134_Chrome-scaled.jpg" alt="مكبوسة - قائمة الطعام — مطعم | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_114134_Chrome-scaled.jpg" alt="مكبوسة - قائمة الطعام — مطعم | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4h16v12H4zM2 20h20M9 8l3 3 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">مكبوسة - قائمة الطعام</span>
@@ -1659,7 +1622,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="https://makbusah-ratings.onrender.com/" data-image="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_114212_Chrome-scaled.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل مطاعم مكبوسة - استبيان رضا العملاء">
           <span class="rw-card-media" style="--ph-a:#3A0B78;--ph-b:#FFD82F">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_114212_Chrome-scaled.jpg" alt="مطاعم مكبوسة - استبيان رضا العملاء — استبيان عملاء | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/Screenshot_20260719_114212_Chrome-scaled.jpg" alt="مطاعم مكبوسة - استبيان رضا العملاء — استبيان عملاء | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4h16v12H4zM2 20h20M9 8l3 3 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">مطاعم مكبوسة - استبيان رضا العملاء</span>
@@ -1684,7 +1647,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/screencapture-asaclaw-2026-07-09-15_45_17-3-scaled.png">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل الأنصاري والصالح للمحاماة">
           <span class="rw-card-media" style="--ph-a:#2A0A6B;--ph-b:#7B3FE4">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-asaclaw-2026-07-09-15_45_17-3-scaled.png" alt="الأنصاري والصالح للمحاماة — خدمات قانونية | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-asaclaw-2026-07-09-15_45_17-3-scaled.png" alt="الأنصاري والصالح للمحاماة — خدمات قانونية | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4h16v12H4zM2 20h20M9 8l3 3 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">الأنصاري والصالح للمحاماة</span>
@@ -1709,7 +1672,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/screencapture-boutiqemikyajy-2026-07-09-15_38_13-3-scaled.png">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل بوتيك مكياجي">
           <span class="rw-card-media" style="--ph-a:#4C0E91;--ph-b:#17DEFF">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-boutiqemikyajy-2026-07-09-15_38_13-3-scaled.png" alt="بوتيك مكياجي — متجر إلكتروني | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/screencapture-boutiqemikyajy-2026-07-09-15_38_13-3-scaled.png" alt="بوتيك مكياجي — متجر إلكتروني | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">بوتيك مكياجي</span>
@@ -1734,7 +1697,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/بدون-عنوان.webp">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل خبير الشعر">
           <span class="rw-card-media" style="--ph-a:#1A0A4A;--ph-b:#29FFAA">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/بدون-عنوان.webp" alt="خبير الشعر — منتجات العناية بالشعر | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/بدون-عنوان.webp" alt="خبير الشعر — منتجات العناية بالشعر | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">خبير الشعر</span>
@@ -1759,7 +1722,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0012.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل إحصائيات أداء: مساج واحة سبا | حمام مغربي">
           <span class="rw-card-media" style="--ph-a:#3A0B78;--ph-b:#FFD82F">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0012.jpg" alt="إحصائيات أداء: مساج واحة سبا | حمام مغربي — نتائج توثيق الخرائط | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0012.jpg" alt="إحصائيات أداء: مساج واحة سبا | حمام مغربي — نتائج توثيق الخرائط | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C7 2 3 6 3 11c0 2 1 4 2 5l-1 4 4-2c1 .4 3 .7 4 .7 5 0 9-4 9-9s-4-7-9-7zm-3 9l-2-2-2 2 4 4 7-7-2-2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">إحصائيات أداء: مساج واحة سبا | حمام مغربي</span>
@@ -1784,7 +1747,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0011.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل إحصائيات أداء: مؤسسة السلمية لأجهزة السلامة">
           <span class="rw-card-media" style="--ph-a:#2A0A6B;--ph-b:#7B3FE4">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0011.jpg" alt="إحصائيات أداء: مؤسسة السلمية لأجهزة السلامة — نتائج توثيق الخرائط | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0011.jpg" alt="إحصائيات أداء: مؤسسة السلمية لأجهزة السلامة — نتائج توثيق الخرائط | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C7 2 3 6 3 11c0 2 1 4 2 5l-1 4 4-2c1 .4 3 .7 4 .7 5 0 9-4 9-9s-4-7-9-7zm-3 9l-2-2-2 2 4 4 7-7-2-2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">إحصائيات أداء: مؤسسة السلمية لأجهزة السلامة</span>
@@ -1809,7 +1772,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0015.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل توثيق مباشر: شركة أراد للصناعة">
           <span class="rw-card-media" style="--ph-a:#4C0E91;--ph-b:#17DEFF">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0015.jpg" alt="توثيق مباشر: شركة أراد للصناعة — نتائج توثيق الخرائط | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0015.jpg" alt="توثيق مباشر: شركة أراد للصناعة — نتائج توثيق الخرائط | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C7 2 3 6 3 11c0 2 1 4 2 5l-1 4 4-2c1 .4 3 .7 4 .7 5 0 9-4 9-9s-4-7-9-7zm-3 9l-2-2-2 2 4 4 7-7-2-2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">توثيق مباشر: شركة أراد للصناعة</span>
@@ -1834,7 +1797,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0010.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل إحصائيات أداء: مكتب الزعاقي للاستشارات العقارية">
           <span class="rw-card-media" style="--ph-a:#1A0A4A;--ph-b:#29FFAA">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0010.jpg" alt="إحصائيات أداء: مكتب الزعاقي للاستشارات العقارية — نتائج توثيق الخرائط | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0010.jpg" alt="إحصائيات أداء: مكتب الزعاقي للاستشارات العقارية — نتائج توثيق الخرائط | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C7 2 3 6 3 11c0 2 1 4 2 5l-1 4 4-2c1 .4 3 .7 4 .7 5 0 9-4 9-9s-4-7-9-7zm-3 9l-2-2-2 2 4 4 7-7-2-2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">إحصائيات أداء: مكتب الزعاقي للاستشارات العقارية</span>
@@ -1859,7 +1822,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0009.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل إحصائيات أداء: شاهي راقي">
           <span class="rw-card-media" style="--ph-a:#3A0B78;--ph-b:#FFD82F">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0009.jpg" alt="إحصائيات أداء: شاهي راقي — نتائج توثيق الخرائط | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0009.jpg" alt="إحصائيات أداء: شاهي راقي — نتائج توثيق الخرائط | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C7 2 3 6 3 11c0 2 1 4 2 5l-1 4 4-2c1 .4 3 .7 4 .7 5 0 9-4 9-9s-4-7-9-7zm-3 9l-2-2-2 2 4 4 7-7-2-2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">إحصائيات أداء: شاهي راقي</span>
@@ -1884,7 +1847,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0014.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل إحصائيات أداء: بوفية خفيف ونظيف">
           <span class="rw-card-media" style="--ph-a:#2A0A6B;--ph-b:#7B3FE4">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0014.jpg" alt="إحصائيات أداء: بوفية خفيف ونظيف — نتائج توثيق الخرائط | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/IMG-20260719-WA0014.jpg" alt="إحصائيات أداء: بوفية خفيف ونظيف — نتائج توثيق الخرائط | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C7 2 3 6 3 11c0 2 1 4 2 5l-1 4 4-2c1 .4 3 .7 4 .7 5 0 9-4 9-9s-4-7-9-7zm-3 9l-2-2-2 2 4 4 7-7-2-2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">إحصائيات أداء: بوفية خفيف ونظيف</span>
@@ -1909,7 +1872,7 @@ body.rw-lock{overflow:hidden!important}
         data-link="" data-image="https://rwabts.net/wp-content/uploads/2026/07/صورة-طويلة-١٩‏-٠٧‏-٢٠٢٦-١٢.٥٧.jpg">
         <button class="rw-card-btn" type="button" aria-label="عرض تفاصيل الهوية البصرية المتكاملة - أصايل التمور">
           <span class="rw-card-media" style="--ph-a:#4C0E91;--ph-b:#17DEFF">
-            <img class="rw-card-img" data-src="https://rwabts.net/wp-content/uploads/2026/07/صورة-طويلة-١٩‏-٠٧‏-٢٠٢٦-١٢.٥٧.jpg" alt="الهوية البصرية المتكاملة - أصايل التمور — هويات متكاملة | من أعمال روابط" decoding="async" width="1200" height="750">
+            <img class="rw-card-img" src="https://rwabts.net/wp-content/uploads/2026/07/صورة-طويلة-١٩‏-٠٧‏-٢٠٢٦-١٢.٥٧.jpg" alt="الهوية البصرية المتكاملة - أصايل التمور — هويات متكاملة | من أعمال روابط" loading="lazy" decoding="async" width="1200" height="750">
             <span class="rw-card-ph" aria-hidden="true">
               <svg class="rw-ph-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2l3 7 7 .5-5.5 4.5L18 21l-6-4-6 4 1.5-7L2 9.5 9 9z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span class="rw-ph-name">الهوية البصرية المتكاملة - أصايل التمور</span>
@@ -2003,11 +1966,12 @@ body.rw-lock{overflow:hidden!important}
         <p class="rw-m-desc" id="rw-m-desc"></p>
         <div class="rw-m-tags" id="rw-m-tags"></div>
       </div>
-      <div class="rw-m-foot" id="rw-m-foot">
+      <div class="rw-m-foot">
         <a class="rw-m-visit" id="rw-m-visit" target="_blank" rel="noopener nofollow" hidden>
           زيارة المشروع
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v4a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
+        <span class="rw-m-note" id="rw-m-note" hidden>مشروع خاص — الرابط غير متاح للعرض</span>
       </div>
     </div>
   </div>
@@ -2028,6 +1992,264 @@ body.rw-lock{overflow:hidden!important}
 
   function $(id) { return document.getElementById(id); }
   function on(el, ev, fn, opt) { if (el) el.addEventListener(ev, fn, opt || false); }
+
+  /* ==========================================================
+     1) الهيرو ثلاثي الأبعاد — كرة نقاط مُسقطة بمنظور حقيقي
+        بلا أي مكتبة خارجية · التوصيلات تُحسب مرة واحدة
+     ========================================================== */
+  (function scene() {
+    var cv = $('rw-canvas');
+    if (!cv || !cv.getContext) return;
+    var ctx = cv.getContext('2d', { alpha: true });
+    if (!ctx) return;
+
+    var stage = cv.parentNode;
+    var W = 0, H = 0, DPR = 1, CX = 0, CY = 0, R = 0;
+    var raf = 0, visible = true, running = false;
+
+    var PALETTE = [
+      [23, 222, 255],   // سماوي
+      [41, 255, 170],   // نعناعي
+      [255, 216, 47],   // أصفر
+      [150, 110, 255]   // بنفسجي فاتح
+    ];
+
+    var N = 0, pts = [], edges = [], rings = [];
+    var rotY = 0, rotX = -0.32, tgX = -0.32, tgY = 0, curX = -0.32, curY = 0;
+
+    function buildGeometry() {
+      N = W < 620 ? 150 : (W < 1000 ? 210 : 280);
+      pts = [];
+      var golden = Math.PI * (3 - Math.sqrt(5));
+      for (var i = 0; i < N; i++) {
+        var y = 1 - (i / (N - 1)) * 2;
+        var rad = Math.sqrt(Math.max(0, 1 - y * y));
+        var th = golden * i;
+        var c = PALETTE[i % PALETTE.length];
+        pts.push({
+          x: Math.cos(th) * rad, y: y, z: Math.sin(th) * rad,
+          c: c,
+          s: 0.55 + ((i * 37) % 100) / 100 * 0.85,
+          ph: (i % 17) / 17 * Math.PI * 2
+        });
+      }
+      // الجيران ثابتون لأن الدوران صلب — نحسبهم مرة واحدة
+      edges = [];
+      var TH = W < 620 ? 0.40 : 0.345;
+      var TH2 = TH * TH;
+      for (var a = 0; a < N; a++) {
+        var pa = pts[a], links = 0;
+        for (var b = a + 1; b < N; b++) {
+          var pb = pts[b];
+          var dx = pa.x - pb.x, dy = pa.y - pb.y, dz = pa.z - pb.z;
+          var d2 = dx * dx + dy * dy + dz * dz;
+          if (d2 < TH2) { edges.push([a, b, 1 - Math.sqrt(d2) / TH]); if (++links > 4) break; }
+        }
+      }
+      // ثلاث حلقات مدارية مائلة
+      rings = [];
+      var defs = [
+        { tilt: 0.00, spin: 0.0, c: [23, 222, 255], rr: 1.30 },
+        { tilt: 1.15, spin: 0.7, c: [41, 255, 170], rr: 1.16 },
+        { tilt: -0.92, spin: 2.1, c: [255, 216, 47], rr: 1.44 }
+      ];
+      for (var k = 0; k < defs.length; k++) {
+        var d = defs[k], seg = 76, path = [];
+        for (var s = 0; s <= seg; s++) {
+          var t = (s / seg) * Math.PI * 2;
+          var px = Math.cos(t) * d.rr, pz = Math.sin(t) * d.rr, py = 0;
+          // إمالة حول المحور X ثم لف حول Y
+          var y1 = py * Math.cos(d.tilt) - pz * Math.sin(d.tilt);
+          var z1 = py * Math.sin(d.tilt) + pz * Math.cos(d.tilt);
+          var x2 = px * Math.cos(d.spin) + z1 * Math.sin(d.spin);
+          var z2 = -px * Math.sin(d.spin) + z1 * Math.cos(d.spin);
+          path.push({ x: x2, y: y1, z: z2 });
+        }
+        rings.push({ path: path, c: d.c });
+      }
+    }
+
+    function resize() {
+      var w = stage.clientWidth || 1, h = stage.clientHeight || 1;
+      DPR = Math.min(window.devicePixelRatio || 1, 2);
+      if (w === W && h === H) return false;
+      W = w; H = h;
+      cv.width = Math.round(W * DPR);
+      cv.height = Math.round(H * DPR);
+      cv.style.width = W + 'px';
+      cv.style.height = H + 'px';
+      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+      CX = W / 2;
+      CY = H * 0.47;
+      R = Math.min(W, H) * (W < 700 ? 0.30 : 0.355);
+      buildGeometry();
+      return true;
+    }
+
+    var VD = 3.1; // مسافة الكاميرا بوحدات نصف القطر
+
+    function project(p, sx, cx, sy, cy) {
+      // دوران حول Y ثم X
+      var x1 = p.x * cy + p.z * sy;
+      var z1 = -p.x * sy + p.z * cy;
+      var y2 = p.y * cx - z1 * sx;
+      var z2 = p.y * sx + z1 * cx;
+      var k = VD / (VD - z2);
+      return { X: CX + x1 * R * k, Y: CY + y2 * R * k, K: k, Z: z2 };
+    }
+
+    var t0 = 0;
+    function frame(ts) {
+      raf = 0;
+      if (!running) return;
+      if (!t0) t0 = ts;
+      var t = (ts - t0) / 1000;
+
+      curY += (tgY - curY) * 0.055;
+      curX += (tgX - curX) * 0.055;
+      rotY += REDUCE ? 0 : 0.0021;
+      var ay = rotY + curY;
+      var ax = curX;
+
+      var sy = Math.sin(ay), cy = Math.cos(ay);
+      var sx = Math.sin(ax), cx = Math.cos(ax);
+
+      ctx.clearRect(0, 0, W, H);
+
+      // هالة مركزية
+      var g = ctx.createRadialGradient(CX, CY, 0, CX, CY, R * 2.15);
+      g.addColorStop(0, 'rgba(120,70,220,.34)');
+      g.addColorStop(.45, 'rgba(76,14,145,.14)');
+      g.addColorStop(1, 'rgba(10,3,37,0)');
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.arc(CX, CY, R * 2.15, 0, Math.PI * 2);
+      ctx.fill();
+
+      // الحلقات المدارية
+      for (var r = 0; r < rings.length; r++) {
+        var ring = rings[r], path = ring.path, c = ring.c;
+        ctx.lineWidth = 1.05;
+        for (var s = 0; s < path.length - 1; s++) {
+          var A = project(path[s], sx, cx, sy, cy);
+          var B = project(path[s + 1], sx, cx, sy, cy);
+          var depth = (A.Z + B.Z) / 2;
+          var al = 0.10 + (depth + 1.45) / 2.9 * 0.34;
+          ctx.strokeStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + al.toFixed(3) + ')';
+          ctx.beginPath();
+          ctx.moveTo(A.X, A.Y);
+          ctx.lineTo(B.X, B.Y);
+          ctx.stroke();
+        }
+      }
+
+      // إسقاط النقاط
+      var proj = new Array(N);
+      for (var i = 0; i < N; i++) proj[i] = project(pts[i], sx, cx, sy, cy);
+
+      // خطوط الربط
+      ctx.lineWidth = 0.9;
+      for (var e = 0; e < edges.length; e++) {
+        var ea = edges[e][0], eb = edges[e][1], w = edges[e][2];
+        var PA = proj[ea], PB = proj[eb];
+        var dep = (PA.Z + PB.Z) / 2;
+        if (dep < -0.62) continue;
+        var alpha = (0.05 + (dep + 1) / 2 * 0.24) * w;
+        ctx.strokeStyle = 'rgba(150,200,255,' + alpha.toFixed(3) + ')';
+        ctx.beginPath();
+        ctx.moveTo(PA.X, PA.Y);
+        ctx.lineTo(PB.X, PB.Y);
+        ctx.stroke();
+      }
+
+      // ترتيب حسب العمق ثم الرسم
+      var order = [];
+      for (var q = 0; q < N; q++) order.push(q);
+      order.sort(function (m, n) { return proj[m].Z - proj[n].Z; });
+
+      for (var o = 0; o < order.length; o++) {
+        var idx = order[o], P = proj[idx], pt = pts[idx];
+        var depthT = (P.Z + 1) / 2;                 // 0 خلف · 1 أمام
+        var pulse = REDUCE ? 1 : (0.82 + Math.sin(t * 1.5 + pt.ph) * 0.18);
+        var rad = Math.max(0.6, pt.s * P.K * (W < 620 ? 1.5 : 1.95) * pulse);
+        var al = 0.18 + depthT * 0.78;
+        var col = pt.c;
+
+        if (depthT > 0.74) {
+          ctx.shadowBlur = 13 * depthT;
+          ctx.shadowColor = 'rgba(' + col[0] + ',' + col[1] + ',' + col[2] + ',.85)';
+        } else {
+          ctx.shadowBlur = 0;
+        }
+        ctx.fillStyle = 'rgba(' + col[0] + ',' + col[1] + ',' + col[2] + ',' + al.toFixed(3) + ')';
+        ctx.beginPath();
+        ctx.arc(P.X, P.Y, rad, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.shadowBlur = 0;
+
+      if (REDUCE) { running = false; return; }
+      raf = requestAnimationFrame(frame);
+    }
+
+    function start() {
+      if (running || !visible) return;
+      running = true;
+      t0 = 0;
+      raf = requestAnimationFrame(frame);
+    }
+    function stop() {
+      running = false;
+      if (raf) { cancelAnimationFrame(raf); raf = 0; }
+    }
+
+    // تفاعل المؤشر (سطح المكتب فقط)
+    var shapes = $('rw-shapes');
+    var hero = ROOT.querySelector('.rw-hero');
+    if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+      on(hero, 'pointermove', function (e) {
+        var r = hero.getBoundingClientRect();
+        var nx = (e.clientX - r.left) / r.width - 0.5;
+        var ny = (e.clientY - r.top) / r.height - 0.5;
+        tgY = nx * 0.72;
+        tgX = -0.32 + ny * 0.42;
+        if (shapes) {
+          shapes.style.setProperty('--ry', (nx * 14).toFixed(2) + 'deg');
+          shapes.style.setProperty('--rx', (-ny * 12).toFixed(2) + 'deg');
+        }
+        if (!running) start();
+      });
+      on(hero, 'pointerleave', function () {
+        tgY = 0; tgX = -0.32;
+        if (shapes) { shapes.style.setProperty('--ry', '0deg'); shapes.style.setProperty('--rx', '0deg'); }
+      });
+    }
+
+    // إيقاف الرسم خارج الشاشة / عند إخفاء التبويب
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) {
+        visible = en[0].isIntersecting;
+        if (visible) start(); else stop();
+      }, { threshold: 0.02 }).observe(cv);
+    }
+    on(document, 'visibilitychange', function () {
+      if (document.hidden) stop(); else start();
+    });
+
+    var rt;
+    on(window, 'resize', function () {
+      clearTimeout(rt);
+      rt = setTimeout(function () { if (resize() && !running) { start(); } }, 160);
+    });
+    if ('ResizeObserver' in window) {
+      var ro = new ResizeObserver(function () { if (resize() && !running) start(); });
+      ro.observe(stage);
+    }
+    try { mqReduce.addEventListener('change', function (e) { REDUCE = e.matches; start(); }); } catch (err) {}
+
+    resize();
+    start();
+  })();
 
   /* ==========================================================
      2) عدّاد الأرقام
@@ -2086,29 +2308,11 @@ body.rw-lock{overflow:hidden!important}
       img.style.display = 'none';
     }
   }
-  /* تحميل كسول مضبوط: لا يُطلب src إلا قبل ظهور الصورة بـ 250px.
-     البطاقات المخفية (display:none) لا تتقاطع أبداً، فلا تُحمَّل قبل عرضها. */
-  function loadImage(img) {
-    var src = img.getAttribute('data-src');
-    if (!src) return;
-    img.removeAttribute('data-src');
+  [].slice.call(ROOT.querySelectorAll('.rw-card-img')).forEach(function (img) {
+    if (img.complete) { markImage(img); return; }
     on(img, 'load', function () { markImage(img); });
     on(img, 'error', function () { markImage(img); });
-    img.src = src;
-  }
-  var lazyImgs = [].slice.call(ROOT.querySelectorAll('.rw-card-img[data-src]'));
-  if ('IntersectionObserver' in window) {
-    var imgIO = new IntersectionObserver(function (en, ob) {
-      en.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        ob.unobserve(entry.target);
-        loadImage(entry.target);
-      });
-    }, { rootMargin: '250px 0px' });
-    lazyImgs.forEach(function (img) { imgIO.observe(img); });
-  } else {
-    lazyImgs.forEach(loadImage);
-  }
+  });
 
   /* ==========================================================
      5) التصفية + العرض التدريجي + ظهور البطاقات
@@ -2202,6 +2406,50 @@ body.rw-lock{overflow:hidden!important}
   apply(false);
 
   /* ==========================================================
+     5.1) إمالة ثلاثية الأبعاد للبطاقات (أجهزة المؤشر فقط)
+     ========================================================== */
+  if (!REDUCE && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    var tiltEl = null, tiltRect = null, tiltRaf = 0, tiltX = 0, tiltY = 0;
+
+    function paintTilt() {
+      tiltRaf = 0;
+      if (!tiltEl) return;
+      tiltEl.style.setProperty('--ty', tiltX.toFixed(2) + 'deg');
+      tiltEl.style.setProperty('--tx', tiltY.toFixed(2) + 'deg');
+    }
+
+    on(grid, 'pointermove', function (e) {
+      if (e.pointerType !== 'mouse') return;
+      var btn = e.target.closest ? e.target.closest('.rw-card-btn') : null;
+      if (!btn) return;
+      if (btn !== tiltEl) {
+        if (tiltEl) resetTilt(tiltEl);
+        tiltEl = btn;
+        btn.classList.add('is-tilting');
+      }
+      tiltRect = btn.getBoundingClientRect();
+      var nx = (e.clientX - tiltRect.left) / tiltRect.width - 0.5;
+      var ny = (e.clientY - tiltRect.top) / tiltRect.height - 0.5;
+      tiltX = nx * 7.5;
+      tiltY = -ny * 6;
+      if (!tiltRaf) tiltRaf = requestAnimationFrame(paintTilt);
+    }, { passive: true });
+
+    function resetTilt(el) {
+      el.classList.remove('is-tilting');
+      el.style.setProperty('--tx', '0deg');
+      el.style.setProperty('--ty', '0deg');
+    }
+    on(grid, 'pointerout', function (e) {
+      var to = e.relatedTarget;
+      if (tiltEl && (!to || !tiltEl.contains(to))) { resetTilt(tiltEl); tiltEl = null; }
+    }, { passive: true });
+    on(grid, 'pointerleave', function () {
+      if (tiltEl) { resetTilt(tiltEl); tiltEl = null; }
+    }, { passive: true });
+  }
+
+  /* ==========================================================
      6) نافذة التفاصيل
      ========================================================== */
   var modal = $('rw-modal');
@@ -2217,7 +2465,7 @@ body.rw-lock{overflow:hidden!important}
   var mDesc = $('rw-m-desc');
   var mTags = $('rw-m-tags');
   var mVisit = $('rw-m-visit');
-  var mFoot = $('rw-m-foot');
+  var mNote = $('rw-m-note');
   var mScroll = $('rw-m-scroll');
   var prevBtn = $('rw-prev');
   var nextBtn = $('rw-next');
@@ -2285,12 +2533,15 @@ body.rw-lock{overflow:hidden!important}
       mTags.appendChild(s);
     });
 
-    // بلا رابط: يُخفى التذييل كله فلا يبقى شريط فارغ
-    var hasLink = !!d.link;
-    mVisit.hidden = !hasLink;
-    mFoot.hidden = !hasLink;
-    if (hasLink) mVisit.href = d.link;
-    else mVisit.removeAttribute('href');
+    if (d.link) {
+      mVisit.href = d.link;
+      mVisit.hidden = false;
+      mNote.hidden = true;
+    } else {
+      mVisit.removeAttribute('href');
+      mVisit.hidden = true;
+      mNote.hidden = false;
+    }
 
     posEl.textContent = (i + 1) + ' / ' + visibleCards.length;
     prevBtn.disabled = i <= 0;
@@ -2426,6 +2677,3 @@ body.rw-lock{overflow:hidden!important}
 
 })();
 </script>
-
-</body>
-</html>

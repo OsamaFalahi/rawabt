@@ -709,14 +709,14 @@
   content:"";position:absolute;width:72%;aspect-ratio:1;border-radius:50%;
   background:radial-gradient(circle,rgba(123,63,228,.52) 0%,rgba(76,14,145,.20) 46%,transparent 70%);
 }#rwabts-works .rw-scene{
-  --r:196px;--n:74px;
+  --r:206px;--n:74px;
   position:relative;width:min(100%,540px);aspect-ratio:1;
   display:grid;place-items:center;
   transform-style:preserve-3d;transform:rotateX(28deg);
 }
 /* النواة: أشكال الشعار الأربعة */
-#rwabts-works .rw-core{position:relative;width:138px;height:138px;transform-style:preserve-3d;
-  animation:rw-core-float 8s var(--rw-ease) infinite}#rwabts-works .rw-core span{position:absolute;width:62px;height:62px;display:block}#rwabts-works .rw-core-a{border-radius:50%;background:linear-gradient(140deg,#17DEFF,#0C9FC4);
+#rwabts-works .rw-core{position:relative;width:132px;height:132px;transform-style:preserve-3d;
+  animation:rw-core-float 8s var(--rw-ease) infinite}#rwabts-works .rw-core span{position:absolute;width:59px;height:59px;display:block}#rwabts-works .rw-core-a{border-radius:50%;background:linear-gradient(140deg,#17DEFF,#0C9FC4);
   top:0;left:0;box-shadow:0 0 28px rgba(23,222,255,.48)}#rwabts-works .rw-core-b{border-radius:50% 50% 7px 50%;background:linear-gradient(140deg,#29FFAA,#12C98A);
   top:0;right:0;box-shadow:0 0 26px rgba(41,255,170,.42)}#rwabts-works .rw-core-c{border-radius:50% 7px 50% 50%;background:linear-gradient(140deg,#7B3FE4,#4C0E91);
   bottom:0;left:0;box-shadow:0 0 24px rgba(123,63,228,.40)}#rwabts-works .rw-core-d{border-radius:50%;background:linear-gradient(140deg,#FFD82F,#EFA400);
@@ -745,6 +745,7 @@
   transform-style:preserve-3d;
   transform:rotateY(var(--a)) translateZ(var(--r));
 }#rwabts-works .rw-node-face{
+  position:relative;
   width:100%;height:100%;border-radius:21px;
   display:grid;place-items:center;color:#fff;
   background:linear-gradient(150deg,rgba(255,255,255,.19),rgba(255,255,255,.07));
@@ -753,7 +754,15 @@
   /* الدوران المعاكس يُبقي الأيقونة مواجهة للناظر · التأخير نفسه يضبط تلاشي العمق */
   animation:rw-node-face 34s linear infinite,rw-node-depth 34s linear infinite;
   animation-delay:calc(var(--i) * -34s / 7);
-}#rwabts-works .rw-node-icon{width:30px;height:30px}@keyframes rw-orbit{to{transform:rotateY(360deg)}}@keyframes rw-node-face{to{transform:rotateY(-360deg)}}@keyframes rw-node-depth{0%{opacity:1}50%{opacity:.32}100%{opacity:1}}
+}#rwabts-works .rw-node-icon{width:30px;height:30px}
+/* التسمية معلّقة أسفل البطاقة: ترث الدوران المعاكس وتلاشي العمق من .rw-node-face */
+#rwabts-works .rw-node-label{
+  position:absolute;top:calc(100% + 9px);left:50%;transform:translateX(-50%);
+  white-space:nowrap;pointer-events:none;
+  font-family:var(--rw-font-d);font-weight:700;font-size:12.5px;letter-spacing:.2px;
+  color:rgba(255,255,255,.88);
+  text-shadow:0 2px 10px rgba(8,2,30,.75);
+}@keyframes rw-orbit{to{transform:rotateY(360deg)}}@keyframes rw-node-face{to{transform:rotateY(-360deg)}}@keyframes rw-node-depth{0%{opacity:1}50%{opacity:.32}100%{opacity:1}}
 /* مؤشر التمرير */
 #rwabts-works .rw-cue{
   position:absolute;z-index:7;bottom:26px;left:50%;transform:translateX(-50%);
@@ -970,8 +979,8 @@ body.rw-lock{overflow:hidden!important}
    ============================================================ */
 @media (max-width:1024px){#rwabts-works .rw-hero-inner{grid-template-columns:1fr;gap:0}#rwabts-works .rw-hero-copy{max-width:none;text-align:center;margin-inline:auto}#rwabts-works .rw-lead{margin-inline:auto}#rwabts-works .rw-hero-actions{justify-content:center}#rwabts-works .rw-stats{margin-inline:auto}#rwabts-works .rw-stat{padding-inline-start:0;padding-block-start:12px;text-align:center}#rwabts-works .rw-stat::before{inset-inline:0;top:0;bottom:auto;width:34px;height:3px;margin-inline:auto}
 /* المشهد يصبح شريطاً بصرياً فوق النص، فيبقى النص على خلفية نظيفة تماماً */
-#rwabts-works .rw-stage{order:-1;aspect-ratio:auto;height:clamp(186px,max(26vh,26vw),286px);margin-block-end:clamp(6px,2vh,18px)}#rwabts-works .rw-scene{--r:clamp(112px,20vw,178px);--n:clamp(50px,7vw,70px);
-    width:min(100%,max(340px,60vw));height:100%;aspect-ratio:auto;transform:rotateX(19deg)}#rwabts-works .rw-core{width:clamp(86px,11vw,122px);height:clamp(86px,11vw,122px)}#rwabts-works .rw-core span{width:clamp(38px,5vw,55px);height:clamp(38px,5vw,55px)}#rwabts-works .rw-node-face{border-radius:clamp(15px,2vw,20px)}#rwabts-works .rw-node-icon{width:clamp(21px,2.9vw,29px);height:clamp(21px,2.9vw,29px)}
+#rwabts-works .rw-stage{order:-1;aspect-ratio:auto;height:clamp(206px,max(29vh,29vw),306px);margin-block-end:clamp(6px,2vh,18px)}#rwabts-works .rw-scene{--r:clamp(130px,20vw,186px);--n:clamp(50px,7vw,70px);
+    width:min(100%,max(340px,60vw));height:100%;aspect-ratio:auto;transform:rotateX(25deg)}#rwabts-works .rw-core{width:clamp(72px,10vw,118px);height:clamp(72px,10vw,118px)}#rwabts-works .rw-core span{width:clamp(32px,4.5vw,53px);height:clamp(32px,4.5vw,53px)}#rwabts-works .rw-node-face{border-radius:clamp(15px,2vw,20px)}#rwabts-works .rw-node-icon{width:clamp(21px,2.9vw,29px);height:clamp(21px,2.9vw,29px)}#rwabts-works .rw-node-label{top:calc(100% + 5px);font-size:clamp(10.5px,1.5vw,12.5px)}
 }@media (max-width:860px){#rwabts-works .rw-panel{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr);
     width:100%;max-height:100vh;max-height:100svh;height:100%;border-radius:0}#rwabts-works .rw-modal{padding:0}#rwabts-works .rw-m-media{aspect-ratio:16/10;min-height:0}#rwabts-works .rw-m-nav{inset-block-end:12px;inset-inline-start:12px}
 }@media (max-width:640px){
@@ -1051,13 +1060,13 @@ body.rw-lock{overflow:hidden!important}
         <div class="rw-ring"></div>
         <div class="rw-ring rw-ring-b"></div>
         <div class="rw-orbit">
-          <div class="rw-node" style="--a:0.00deg;--i:0"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-          <div class="rw-node" style="--a:51.43deg;--i:1"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4h16v12H4zM2 20h20M9 8l3 3 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-          <div class="rw-node" style="--a:102.86deg;--i:2"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 17l6-6 4 4 8-8M21 7v6h-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-          <div class="rw-node" style="--a:154.29deg;--i:3"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 5h18v14H3zM10 9l5 3-5 3z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-          <div class="rw-node" style="--a:205.71deg;--i:4"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M17 2l-3 8h5l-9 12 3-8H8z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-          <div class="rw-node" style="--a:257.14deg;--i:5"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2l3 7 7 .5-5.5 4.5L18 21l-6-4-6 4 1.5-7L2 9.5 9 9z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-          <div class="rw-node" style="--a:308.57deg;--i:6"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C7 2 3 6 3 11c0 2 1 4 2 5l-1 4 4-2c1 .4 3 .7 4 .7 5 0 9-4 9-9s-4-7-9-7zm-3 9l-2-2-2 2 4 4 7-7-2-2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+          <div class="rw-node" style="--a:0.00deg;--i:0"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 3h2l2 12h10l3-8H5M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="rw-node-label">متاجر</span></span></div>
+          <div class="rw-node" style="--a:51.43deg;--i:1"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4h16v12H4zM2 20h20M9 8l3 3 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="rw-node-label">مواقع</span></span></div>
+          <div class="rw-node" style="--a:102.86deg;--i:2"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 17l6-6 4 4 8-8M21 7v6h-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="rw-node-label">تسويق</span></span></div>
+          <div class="rw-node" style="--a:154.29deg;--i:3"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M3 5h18v14H3zM10 9l5 3-5 3z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="rw-node-label">فيديو</span></span></div>
+          <div class="rw-node" style="--a:205.71deg;--i:4"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M17 2l-3 8h5l-9 12 3-8H8z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="rw-node-label">سوشيال</span></span></div>
+          <div class="rw-node" style="--a:257.14deg;--i:5"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2l3 7 7 .5-5.5 4.5L18 21l-6-4-6 4 1.5-7L2 9.5 9 9z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="rw-node-label">هويات</span></span></div>
+          <div class="rw-node" style="--a:308.57deg;--i:6"><span class="rw-node-face"><svg class="rw-node-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C7 2 3 6 3 11c0 2 1 4 2 5l-1 4 4-2c1 .4 3 .7 4 .7 5 0 9-4 9-9s-4-7-9-7zm-3 9l-2-2-2 2 4 4 7-7-2-2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="rw-node-label">توثيق</span></span></div>
         </div>
       </div>
     </div>
